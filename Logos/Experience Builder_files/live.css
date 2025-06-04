@@ -1,0 +1,599 @@
+
+/*PROXY ELEMENT*/
+
+.sf-interactions-proxySelectElement {
+    position: absolute;
+    box-shadow: 0 0 0 2px #0059A7;
+    outline: none;
+    display: none;
+    z-index: 1000;
+}
+
+.sf-interactions-proxyHoverElement {
+    position: absolute;
+    box-shadow: 0 0 0 2px #0069c6;
+    outline: none;
+    display: none;
+    z-index: 1001;
+}
+
+.sf-interactions-proxySelectElement {
+    box-shadow: 0 0 0 2px #0059A7;
+}
+
+.sf-interactions-proxyHoverElement {
+    box-shadow: 0 0 0 2px #0069c6;
+}
+
+.sf-interactions-proxySelectElement.hasAudience {
+    box-shadow: 0 0 0 2px #5A379F;
+}
+
+.sf-interactions-proxyHoverElement.hasAudience {
+    box-shadow: 0 0 0 2px #663FB4;
+}
+
+.sf-interactions-proxyHoverElement .proxyLabel {
+    background-color: #0069C6;
+}
+
+.sf-interactions-proxySelectElement .proxyLabel {
+    background-color: #0059A7;
+}
+
+.sf-interactions-proxySelectElement.hasAudience .proxyLabel {
+    background-color: #5A379F;
+}
+
+.sf-interactions-proxyHoverElement.hasAudience .proxyLabel {
+    background-color: #663FB4;
+}
+
+.sf-interactions-proxySelectElement.hasPriority {
+    box-shadow: 0 0 0 2px #EE5826;
+}
+
+.sf-interactions-proxyHoverElement.hasPriority {
+    box-shadow: 0 0 0 2px #F36435;
+}
+
+.sf-interactions-proxySelectElement.hasPriority .proxyLabel {
+    background-color: #EE5826;
+}
+
+.sf-interactions-proxyHoverElement.hasPriority .proxyLabel {
+    background-color: #F36435;
+}
+
+.proxyLabel {
+    font-family: "Salesforce Sans", Arial, sans-serif;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px 3px 0 0;
+    background-color: #0059A7;
+    color: #fff;
+    padding: 0 0.6rem 0 0.5rem;
+    position: absolute;
+    left: -2px;
+    top: -26px;
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+    max-width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    visibility: visible;
+}
+
+.proxyLabel-label {
+    min-width: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    top: 0;
+}
+
+.proxyLabel--center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.proxyLabel--bottom {
+    border-radius: 0 0 3px 3px;
+    top: 0;
+}
+
+.sf-interactions-proxySpringLoadedAnchor {
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+    z-index: 6999;
+}
+
+.sf-interactions-proxySpringLoadedAnchor.sf-interactions-proxySpringLoadedAnchor-visible {
+    border: 2px solid #04844b;
+    -webkit-animation-name: anchorHover;
+    animation-name: anchorHover;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    display: block;
+}
+
+.sf-interactions-dragProxy {
+    opacity: 0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    z-index: 999;
+    cursor: not-allowed;
+}
+
+.sf-interactions-dragProxy > * {
+    pointer-events: none;
+}
+
+.sf-interactions-proxyToolbox {
+    position: absolute;
+    display: inline-block;
+    height: 20px;
+    min-width: 50px;
+    top: 0;
+    right: 0;
+}
+
+.sf-interactions-proxyToolbox.top {
+    top: -10px;
+}
+
+.sf-interactions-proxyToolbox.bottom {
+    bottom: -10px;
+}
+
+.sf-interactions-proxyToolboxItem {
+    border-top: 0;
+    border-right: 0;
+    font-size: 8px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    width: 18px;
+    color: #FFF;
+    float: right;
+    pointer-events: auto;
+    opacity: 0.9;
+}
+
+.sf-interactions-proxyToolboxItem:hover {
+    opacity: 1;
+}
+
+.sf-interactions-proxyToolboxItem-hidden {
+    display: none;
+}
+
+.sf-interactions-proxySelectElement .sf-interactions-proxyToolboxItem, 
+.sf-interactions-proxySelectElement .sf-interactions-proxy--addSection {
+    background-color: #0059A7;
+    border-color: #0059A7;
+    border: 1px solid #0059A7;
+}
+
+.sf-interactions-proxyHoverElement .sf-interactions-proxyToolboxItem, 
+.sf-interactions-proxyHoverElement .sf-interactions-proxy--addSection {
+    background-color: #0069c6;
+    border-color: #0069c6;
+    border: 1px solid #0069c6;
+}
+
+.sf-interactions-proxySelectElement.hasAudience .sf-interactions-proxyToolboxItem,
+.sf-interactions-proxySelectElement.hasAudience .sf-interactions-proxy--addSection {
+    background-color: #5A379F;
+    border-color: #5A379F;
+    border: 1px solid #5A379F;
+}
+
+.sf-interactions-proxyHoverElement.hasAudience .sf-interactions-proxyToolboxItem,
+.sf-interactions-proxyHoverElement.hasAudience .sf-interactions-proxy--addSection {
+    background-color: #663fb4;
+    border-color: #663fb4;
+    border: 1px solid #663fb4;
+}
+
+.sf-interactions-proxySelectElement.hasPriority .sf-interactions-proxyToolboxItem,
+.sf-interactions-proxySelectElement.hasPriority .sf-interactions-proxy--addSection {
+    background-color: #EE5826;
+    border-color: #EE5826;
+    border: 1px solid #EE5826;
+}
+
+.sf-interactions-proxyHoverElement.hasPriority .sf-interactions-proxyToolboxItem,
+.sf-interactions-proxyHoverElement.hasPriority .sf-interactions-proxy--addSection {
+    background-color: #F36435;
+    border-color: #F36435;
+    border: 1px solid #F36435;
+}
+
+.sf-interactions-proxyDelete {
+    cursor: pointer;
+    float: right;
+    text-decoration: none;
+}
+
+.sf-interactions-proxyHoverElement.sf-interactions-containerProxy,
+.sf-interactions-proxySelectElement.sf-interactions-containerProxy {
+    pointer-events: none !important;
+}
+
+.sf-interactions-proxyHoverElement.sf-interactions-containerProxy .proxyLabel,
+.sf-interactions-proxySelectElement.sf-interactions-containerProxy .proxyLabel {
+    pointer-events: auto;
+}
+
+.sf-interactions-proxyIcon {
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.sf-interactions-proxyIcon--region {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIj48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJtMTEuNSAxN2gtOGMtMC44IDAtMS41IDAuNy0xLjUgMS41djI1LjVjMCAyLjIgMS44IDQgNCA0aDUuNWMwLjggMCAxLjUtMC43IDEuNS0xLjV2LTI4YzAtMC44LTAuNy0xLjUtMS41LTEuNXogbTM3IDBoLTMwYy0wLjggMC0xLjUgMC43LTEuNSAxLjV2MjhjMCAwLjggMC43IDEuNSAxLjUgMS41aDI3LjVjMi4yIDAgNC0xLjggNC00di0yNS41YzAtMC44LTAuNy0xLjUtMS41LTEuNXogbS0yLjUtMTNoLTQwYy0yLjIgMC00IDEuOC00IDR2My41YzAgMC44IDAuNyAxLjUgMS41IDEuNWg0NWMwLjggMCAxLjUtMC43IDEuNS0xLjV2LTMuNWMwLTIuMi0xLjgtNC00LTR6Ij48L3BhdGg+PC9nPjwvc3ZnPg==);
+}
+
+.sf-interactions-proxyIcon--component {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJtMjMuOCAzMS4ybC0zLjggMTcuNmMtMC4yIDEgMS4xIDEuNyAxLjcgMC45bDIxLTI2YzAuNi0wLjcgMC4xLTEuNy0wLjctMS43aC0xMS4yYy0wLjggMC0xLjMtMC45LTAuOS0xLjVsOS45LTE2LjJjMC42LTEtMC4xLTIuMy0xLjMtMi4zaC0xNy43Yy0xLjEgMC0yIDAuNy0yLjQgMS43bC04LjMgMjQuM2MtMC4zIDEgMC40IDIgMS40IDJoMTEuNGMwLjYgMCAxLjEgMC42IDAuOSAxLjJ6Ij48L3BhdGg+PC9zdmc+);
+}
+
+.icon-utility-move {
+    /* SLDS svg icon utilty-move in base64 */
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJtNDkuNyAyNS4zbC04LjMtOWMtMC42LTAuNi0xLjQtMC4xLTEuNCAwLjl2NS44aC0xMGMtMC42IDAtMS0wLjQtMS0xdi0xMGg1LjljMSAwIDEuNS0wLjkgMC45LTEuNGwtOS04LjNjLTAuNC0wLjMtMS0wLjMtMS40IDBsLTkgOC4zYy0wLjYgMC42LTAuMSAxLjQgMC45IDEuNGg1Ljd2MTBjMCAwLjYtMC40IDEtMSAxaC0xMHYtNS45YzAtMS0wLjktMS41LTEuNC0wLjlsLTguMyA5Yy0wLjMgMC40LTAuMyAxIDAgMS40bDguMyA5YzAuNiAwLjYgMS40IDAuMSAxLjQtMC45di01LjdoMTBjMC42IDAgMSAwLjQgMSAxdjEwaC01LjljLTEgMC0xLjUgMC45LTAuOSAxLjRsOSA4LjNjMC40IDAuMyAxIDAuMyAxLjQgMGw5LTguM2MwLjYtMC42IDAuMS0xLjQtMC45LTEuNGgtNS43di0xMGMwLTAuNiAwLjQtMSAxLTFoMTB2NS45YzAgMSAwLjkgMS41IDEuNCAwLjlsOC4zLTljMC40LTAuNSAwLjQtMS4xIDAtMS41eiI+PC9wYXRoPjwvc3ZnPg==');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.icon-utility-delete {
+    /* SLDS svg icon utility-delete in base64 */
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIj48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJtNDUuNSAxMGgtMTIuNXYtNGMwLTIuMi0xLjgtNC00LTRoLTZjLTIuMiAwLTQgMS44LTQgNHY0aC0xMi41Yy0wLjggMC0xLjUgMC43LTEuNSAxLjV2M2MwIDAuOCAwLjcgMS41IDEuNSAxLjVoMzljMC44IDAgMS41LTAuNyAxLjUtMS41di0zYzAtMC44LTAuNy0xLjUtMS41LTEuNXogbS0yMi41LTNjMC0wLjYgMC40LTEgMS0xaDRjMC42IDAgMSAwLjQgMSAxdjNoLTZ2LTN6IG0xOC41IDEzaC0zMWMtMC44IDAtMS41IDAuNy0xLjUgMS41djIzLjVjMCAyLjggMi4yIDUgNSA1aDI0YzIuOCAwIDUtMi4yIDUtNXYtMjMuNWMwLTAuOC0wLjctMS41LTEuNS0xLjV6IG0tMTguNSAyMmMwIDAuNi0wLjQgMS0xIDFoLTJjLTAuNiAwLTEtMC40LTEtMXYtMTRjMC0wLjYgMC40LTEgMS0xaDJjMC42IDAgMSAwLjQgMSAxdjE0eiBtMTAgMGMwIDAuNi0wLjQgMS0xIDFoLTJjLTAuNiAwLTEtMC40LTEtMXYtMTRjMC0wLjYgMC40LTEgMS0xaDJjMC42IDAgMSAwLjQgMSAxdjE0eiI+PC9wYXRoPjwvZz48L3N2Zz4=');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.icon-utility-add {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUyIiB2aWV3Qm94PSIwIDAgNTIgNTIiIHdpZHRoPSI1MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMzAgMjloMTYuNWMuOCAwIDEuNS0uNyAxLjUtMS41di0zYzAtLjgtLjctMS41LTEuNS0xLjVoLTE2LjVjLS42IDAtMS0uNC0xLTF2LTE2LjVjMC0uOC0uNy0xLjUtMS41LTEuNWgtM2MtLjggMC0xLjUuNy0xLjUgMS41djE2LjVjMCAuNi0uNCAxLTEgMWgtMTYuNWMtLjggMC0xLjUuNy0xLjUgMS41djNjMCAuOC43IDEuNSAxLjUgMS41aDE2LjVjLjYgMCAxIC40IDEgMXYxNi41YzAgLjguNyAxLjUgMS41IDEuNWgzYy44IDAgMS41LS43IDEuNS0xLjV2LTE2LjVjMC0uNi40LTEgMS0xeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
+}
+
+.sf-interactions-proxy--performance {
+    height: 100%;
+}
+
+.sf-interactions-proxy--addSection {
+    position: absolute;
+    left: 49.3%;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+.sf-interactions-proxy--addSection:hover {
+    background-color: #143058;
+    border-color: #143058;
+    border: 1px solid #143058;
+}
+
+.sf-interactions-proxy--addSection.add-section-top {
+    top: -12px;
+    padding-bottom: 1px;
+}
+
+.sf-interactions-proxy--addSection.add-section-bottom {
+    bottom: -12px;
+    padding-bottom: 1px;
+}
+
+.sf-interactions-proxy--addSection .icon-utility-add {
+    background-size: 9px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+}
+
+.sf-interactions-proxyIcon--audience, .sf-interactions-proxyIcon--performance {
+    /* SLDS svg groups icon in base64 */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgaWQ9Imdyb3VwcyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PHBhdGggZD0iTTguOCAxMi42Yy0uNC0uNy0uNi0xLjQtLjYtMi4zIDAtMS40LjYtMi42IDEuNS0zLjMtLjMtLjYtLjktMS0xLjgtMS0xLjQgMC0yLjEgMS4xLTIuMSAyLjQgMCAuNy4yIDEuMy43IDEuNy4yLjIuNC42LjQuOSAwIC4zLS4xLjYtLjkgMS0xLjEuNS0yLjEgMS4xLTIuMiAyLjIgMCAuNy41IDEuMiAxLjEgMS4ySDZjLjEgMCAuMy0uMS40LS4zLjUtLjkgMS40LTEuNSAyLjItMS45LjMtLjEuNC0uNC4yLS42ek0xOCAxMmMtLjgtLjQtLjktLjctLjktMSAwLS4zLjItLjcuNC0uOS41LS40LjctMSAuNy0xLjcgMC0xLjMtLjctMi40LTIuMS0yLjQtLjkgMC0xLjUuNC0xLjggMSAuOS43IDEuNSAxLjkgMS41IDMuMyAwIC45LS4yIDEuNi0uNiAyLjMtLjIuMi0uMS41LjIuNy44LjQgMS43LjkgMi4yIDEuOC4xLjIuMy4zLjQuM2gxLjFjLjYgMCAxLjEtLjUgMS4xLTEuMi0uMS0xLjEtMS4xLTEuNy0yLjItMi4yem0tMy45IDIuM2MtLjktLjQtMS0uNy0xLTEuMSAwLS40LjItLjcuNS0xIC41LS40LjgtMS4xLjgtMS45IDAtMS40LS44LTIuNi0yLjQtMi42cy0yLjQgMS4yLTIuNCAyLjZjMCAuOC4zIDEuNC44IDEuOS4zLjMuNS42LjUgMXMtLjEuNy0uOSAxLjFjLTEuMy41LTIuNSAxLjEtMi42IDIuMyAwIC43LjYgMS40IDEuMyAxLjRoNi42Yy43IDAgMS4zLS43IDEuMy0xLjQtLjEtMS4yLTEuMy0xLjgtMi41LTIuM3oiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD48L3N2Zz4=);
+    background-size: 22px;
+    height: 100%;
+    width: 15px;
+    background-position: center center;
+    margin-left: 7px;
+    margin-right: 2px;
+    opacity: 0.9;
+    -webkit-backface-visibility: hidden;
+}
+
+.sf-interactions-proxyIcon--performance {
+    /* SLDS svg dashboard icon with URL encoding for optimal size - NOTE: fill colour is embedded */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#FFF' viewBox='0 0 24 24'%3e%3cpath d='M12 4.8C8 4.8 4.8 8 4.8 12S8 19.2 12 19.2s7.2-3.2 7.2-7.2S16 4.8 12 4.8zm0 1.9c2.9 0 5.3 2.4 5.3 5.3 0 .2 0 .5-.1.7h-2.1c-.2 0-.4.2-.5.4-.2 1.3-1.3 2.3-2.6 2.3s-2.4-1-2.6-2.3c0-.2-.3-.4-.5-.4H6.8c-.1-.2-.1-.5-.1-.7 0-2.9 2.4-5.3 5.3-5.3zm-.6 7.1c.6.3 1.4 0 1.7-.5.4-.9 1.3-4.6 1.1-4.7-.2-.1-2.8 2.7-3.2 3.6-.4.5-.2 1.3.4 1.6z'/%3e%3c/svg%3e");
+}
+
+.sf-interactions-proxyIcon--audience:focus,
+.sf-interactions-proxyIcon--audience:hover,
+.sf-interactions-proxyIcon--performance:focus,
+.sf-interactions-proxyIcon--performance:hover {
+    opacity: 1;
+}
+
+.sf-interactions-proxyPill--performance {
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 9px;
+    padding: 2px 9px;
+    color: #FFF;
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+/*INTERACTIONS*/
+
+.interactions-enabled .ui-widget[data-allow-select="true"] {
+    min-height: 30px;
+}
+
+.sf-interactions-dropContainer {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1000;
+    border: 1px dashed #DADEE2; /* extra in commbuilder */
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+.proxyLabel .proxyLabel-badge {
+    color: #fff;
+    font-size: 9px;
+    text-transform: inherit;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2px 10px;
+    margin-left: 7px;
+}
+
+.sf-interactions-dropContainer .proxyLabel {
+    background-color: #04844b;
+    display: none;
+}
+
+.sf-interactions-dropContainer-highlighted {
+    border: 2px solid #04844b;
+}
+
+.sf-interactions-dropContainer-highlighted.proxy--templateRegion {
+    border: 2px solid #cf368c;
+}
+
+.sf-interactions-dropContainer.proxy--templateRegion .proxyLabel {
+    background-color: #cf368c;
+}
+
+.sf-interactions-dropContainer-highlighted .proxyLabel {
+    display: flex;
+}
+
+.sf-interactions-dropPosition {
+    height: 0;
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    border-bottom: 3px solid #43B66A;
+    left: -2px;
+}
+
+.sf-interactions-dropPosition-highlighted {
+    border-bottom: 1px solid #0069c6;
+}
+
+.sf-interactions-dropPosition-highlighted:before {
+    content:'';
+    height: 7px;
+    border-right: 1px solid #0069c6;
+    float: left;
+    top: -3px;
+    position: relative;
+}
+
+.sf-interactions-dropPosition-highlighted:after {
+    content: '';
+    height: 7px;
+    border-right: 1px solid #0069c6;
+    float: right;
+    top: -3px;
+    position: relative;
+}
+
+.sf-interactions-liveDragging {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+
+
+
+/*EXTRAS*/
+
+.imagesAutoCompleteItemContainer,
+.linkssAutoCompleteItemContainer {
+    width: 400px;
+}
+
+.imagesAutoCompleteItemText,
+.linkssAutoCompleteItemText {
+    float: left;
+    width: 90px;
+    font-weight: bold;
+}
+
+.imagesAutoCompleteItemImage {
+    display: block;
+    margin-left: 95px;
+    max-width: 300px;
+    max-height: 100px;
+}
+
+.ac_results {
+    padding: 0;
+    border: 1px solid black;
+    background-color: white;
+    overflow: hidden;
+    z-index: 99999999;
+}
+
+.ac_results ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ac_results li {
+    margin: 0;
+    padding: 2px 5px;
+    cursor: default;
+    display: block;
+    font: menu;
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.ac_loading {
+    background: white url('/sfsites/assets/Images/Working/indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+    background-color: #eee;
+}
+
+.ac_over {
+    background-color: #0A246A;
+    color: white;
+}
+
+iframe {
+    pointer-events: none;
+}
+
+.forceCommunityVisualforcePage iframe {
+    /* Fix VF cmp cannot be selected in IE11 */
+    display: inline-block;
+}
+
+.panelPlaceHolder div {
+    position: relative;
+    padding: 16px 0;
+    text-align: center;
+    margin: 0 auto;
+    font: 16px/1.5 "Proxima Nova Soft Regular", "ProximaNovaSoft-Regular", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
+    color: rgba(144, 144, 145, 1);
+}
+
+::-moz-selection {
+    background: #B4D5FE !important;
+}
+::selection {
+    background: #B4D5FE !important;
+}
+
+.siteforceDesignTimeComponent,
+.siteforceDesignTimeSection {
+    position: relative;
+}
+
+.siteforceDesignTimeComponent .elementProxyContainer,
+.siteforceDesignTimeSection > .elementProxyContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 8000;
+    pointer-events: none;
+}
+
+.siteforceDesignTimeSection .siteforceDesignTimeComponent .elementProxyContainer {
+    z-index: 8001;
+}
+
+.interactions-enabled .siteforceDesignTimeSection {
+    border: 1px solid #DADEE2;
+}
+
+.interactions-enabled .siteforceDesignTimeComponent .elementProxyContainer,
+.interactions-enabled .siteforceDesignTimeSection > .elementProxyContainer {
+    pointer-events: auto;
+}
+
+.siteforceDesignTimeComponent.sf-interactions-dragProxy .elementProxyContainer {
+    visibility: hidden;
+}
+
+.siteforceDesignTimeComponent.containerElement,
+.interactions-enabled .siteforceDesignTimeSection {
+    pointer-events: auto;
+}
+
+.siteforceDesignTimeComponent.containerElement > .elementProxyContainer,
+.interactions-enabled .siteforceDesignTimeSection > .elementProxyContainer {
+    pointer-events: none;
+}
+
+.cb-richtext-enabled .elementProxyContainer {
+    visibility: hidden;
+}
+
+.siteforceDynamicLayout .move-section-placeholder { 
+    background-color: #DADEE2;
+}
+
+.interactions-enabled .siteforceDesignTimeSection:hover {
+    cursor: move;
+}
+
+.interactions-enabled.cb-richtext-enabled .siteforceDesignTimeSection:hover {
+    cursor: auto;
+}
+
+.siteforceDesignTimeSection > .sf-interactions-proxy > .sf-interactions-proxySelectElement {
+    box-shadow: 0 0 0 3px #0059A7 inset;
+}
+
+.siteforceDesignTimeSection > .sf-interactions-proxy > .sf-interactions-proxyHoverElement {
+    box-shadow: 0 0 0 3px #0069c6 inset;
+}
+
+.siteforceDesignTimeSection > .sf-interactions-proxy > .sf-interactions-proxySelectElement.hasAudience {
+    box-shadow: 0 0 0 3px #5A379F inset;
+}
+
+.siteforceDesignTimeSection > .sf-interactions-proxy > .sf-interactions-proxyHoverElement.hasAudience {
+    box-shadow: 0 0 0 3px #663FB4 inset;
+}
+
+.siteforceDesignTimeSection > .sf-interactions-proxy > .sf-interactions-proxySelectElement.hasPriority {
+    box-shadow: 0 0 0 3px #EE5826 inset;
+}
+
+.siteforceDesignTimeSection > .sf-interactions-proxy > .sf-interactions-proxyHoverElement.hasPriority {
+    box-shadow: 0 0 0 3px #F36435 inset;
+}
+
+.siteforceDynamicLayout.ui-sortable-sorting .elementProxyContainer {
+    visibility: hidden;
+}

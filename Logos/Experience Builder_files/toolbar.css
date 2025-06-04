@@ -1,0 +1,224 @@
+.cb-RichTextInline-toolbarPickerOptions::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+.cb-RichTextInline-toolbarPickerOptions::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.cb-RichTextInline-toolbar {
+    padding: 8px 0;
+    padding-right: 8px;
+    background-color: #F4F6F9;
+    border: 1px solid #D8DDE6;
+    border-radius: 4px;
+    position: fixed;
+    margin-top: -47px;
+    margin-left: -1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #54698d;
+    font-size: 13px;
+    z-index: 100;
+    height: 50px;
+}
+
+.cb-RichTextInline-toolbar *:focus {
+    outline: none;
+}
+
+.cb-RichTextInline-toolbarPickerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cb-RichTextInline-toolbarPickerLabel {
+    line-height: 30px;
+    overflow-y: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    width: 70%;
+    text-transform: capitalize;
+}
+
+.cb-RichTextInline-toolbarPicker:hover {
+    background-color: #F4F6F9;
+}
+
+.cb-RichTextInline-toolbarPicker:active {
+    background-color: #EEF1F6;
+}
+
+.cb-RichTextInline-toolbarPicker {
+    width: 100px;
+    border-radius: 4px;
+    background-color: #FFF;
+    border: 1px solid #D8DDE6;
+    font-family: sans-serif;
+    padding-left: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cb-RichTextInline-toolbarPickerArrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #5A5A5A;
+    position: absolute;
+    right: 10px;
+    top: 13px;
+}
+
+.cb-expanded + .cb-RichTextInline-toolbarPickerOptions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cb-RichTextInline-toolbarPickerOptions {
+    position: absolute;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #D8DDE6;
+    margin-top: 10px;
+    left: 0;
+    width: 120%;
+    border-radius: 4px;
+    padding: 2px 0;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.cb-RichTextInline-toolbarPickerOption {
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.cb-RichTextInline-toolbarPickerOption:hover {
+    background-color: #F4F6F9;
+}
+
+.cb-RichTextInline-toolbarGroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    margin-left: 8px;
+    height: 32px;
+    padding: 0;
+}
+
+.cb-RichTextInline-toolbarGroup .cb-RichTextInline-toolbarButton:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.cb-RichTextInline-toolbarGroup .cb-RichTextInline-toolbarButton:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 1px solid #D8DDE6;
+}
+
+.cb-RichTextInline-toolbarButton {
+    height: 32px;
+    width: 32px;
+    border: 1px solid #D8DDE6;
+    background-color: #FFF;
+    border-right: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.cb-RichTextInline-toolbarButton:hover {
+    background-color: #F4F6F9;
+}
+
+.cb-RichTextInline-toolbarButton:active,
+.cb-RichTextInline-toolbarButton.ql-active {
+    background-color: #EEF1F6;
+}
+
+.cb-RichTextInline-toolbarButton svg {
+    fill: #54698D;
+    height: 13px;
+    width: 13px;
+    display: block;
+    margin: auto;
+}
+
+.cb-RichTextInline-editor .ql-editor[contenteditable='true'] {
+    outline: 2px solid #129AE8;
+    min-height: 30px;
+}
+
+.cb-RichTextInline-toolbarPicker--background,
+.cb-RichTextInline-toolbarPicker--color {
+    width: 55px;
+}
+
+.cb-RichTextInline-toolbarPicker--background .cb-RichTextInline-toolbarPickerOptions,
+.cb-RichTextInline-toolbarPicker--color .cb-RichTextInline-toolbarPickerOptions {
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    width: 174px;
+    padding: 2px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.cb-RichTextInline-toolbarPicker--background .cb-RichTextInline-toolbarPickerOption,
+.cb-RichTextInline-toolbarPicker--color .cb-RichTextInline-toolbarPickerOption {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 2px;
+}
+
+.cb-RichTextInline-toolbarPicker--background .cb-RichTextInline-toolbarPickerLabel,
+.cb-RichTextInline-toolbarPicker--color .cb-RichTextInline-toolbarPickerLabel {
+    height: 30px;
+    width: 20px;
+}
+
+.cb-RichTextInline-toolbarPicker--background .cb-RichTextInline-toolbarButtonSvg,
+.cb-RichTextInline-toolbarPicker--color .cb-RichTextInline-toolbarButtonSvg {
+    width: 13px;
+    height: 30px;
+    fill: #54698D;
+}
+
+.cb-RichTextInline-toolbarPicker--font {
+    width: 150px;
+}
+
+.cb-RichTextInline-toolbarPicker--font .cb-RichTextInline-toolbarPickerOptions {
+    width: 140%;
+}
+
+.cb-RichTextInline-toolbarPicker--font .cb-RichTextInline-toolbarPickerOption {
+    padding: 0;
+    padding-left: 8px;
+    line-height: 32px;
+    white-space: nowrap;
+    font-size: 13px;
+}

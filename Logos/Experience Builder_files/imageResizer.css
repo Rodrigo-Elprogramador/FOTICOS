@@ -1,0 +1,45 @@
+.cb-InlineRichText-imageResizeWrapper {
+    display: none;
+    position: absolute;
+    border: 2px solid #1589EE;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+.cb-InlineRichText-imageResizeHandleWrapper {
+    position: relative;
+    height: 100%;
+}
+
+.cb-InlineRichText-imageResizeHandle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #1589EE;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cb-InlineRichText-imageResizeHandle--1 {
+    left: -5px;
+    top: -5px;
+    cursor: nwse-resize;
+}
+
+.cb-InlineRichText-imageResizeHandle--2 {
+    right: -5px;
+    top: -5px;
+    cursor: nesw-resize;
+}
+
+.cb-InlineRichText-imageResizeHandle--3 {
+    bottom: -5px;
+    left: -5px;
+    cursor: nesw-resize;
+}
+
+.cb-InlineRichText-imageResizeHandle--4 {
+    bottom: -5px;
+    right: -5px;
+    cursor: nwse-resize;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>resources</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="resources">
+            <path d="M120,108 C120,114.6 114.6,120 108,120 L12,120 C5.4,120 0,114.6 0,108 L0,12 C0,5.4 5.4,0 12,0 L108,0 C114.6,0 120,5.4 120,12 L120,108 Z" id="Shape-Copy-6" fill="#6bbd6e" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#FFFFFF" x="33" y="26" width="20" height="67" rx="2"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="68" y="26" width="20" height="67" rx="2"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+window.cb_isChrome = !!window.chrome && !window.opera && window.navigator.userAgent.indexOf("Edge") === -1;
+
+if (window.cb_isChrome) {
+    window.cb_cspViolationListener = function(e) {
+        if (e.disposition === 'enforce') {
+            var violation = e.violatedDirective + '_' + e.blockedURI;
+            window.cb_cspViolations = window.cb_cspViolations || {};
+            if (!window.cb_cspViolations[violation]) {
+                window.cb_cspViolations[violation] = {violatedDirective: e.violatedDirective, blockedURI: e.blockedURI};
+            }
+        }
+    };
+    
+    document.addEventListener("securitypolicyviolation", window.cb_cspViolationListener);
+}
